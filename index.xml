@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<christ>
+<cs mid="M1">
+<stuname>Reshma</stuname>
+<stubranch>commerce</stubranch>
+<stucollege>stjoseph's</stucollege>
+<stuemail>resh@gmail.com</stuemail>
+</cs>
+<cs mid="M1">
+<stuname>ayana</stuname>
+<stubranch>cs</stubranch>
+<stucollege>st mary's</stucollege>
+<stuemail>aya@gmail.com</stuemail>
+</cs>
+<cs mid="M1">
+<stuname>aarti</stuname>
+<stubranch>commerce</stubranch>
+<stucollege>st joseph's</stucollege>
+<stuemail>aarti@gmail.com</stuemail>
+</cs>
+<cs mid="M1">
+<stuname>monisha</stuname>
+<stubranch>physics</stubranch>
+<stucollege>mount carmel</stucollege>
+<stuemail>monisha@gmail.com</stuemail>
+</cs>
+<cs mid="M1">
+<stuname>Arun</stuname>
+<stubranch>mathematics</stubranch>
+<stucollege>gardencity</stucollege>
+<stuemail>arun@gmail.com</stuemail>
+</cs>
+</christ>

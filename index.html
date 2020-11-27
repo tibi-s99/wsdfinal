@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body
+  {
+    background-color: #e6e6ff;
+  }
+h1,p{
+  text-align:center; 
+}
+table,th,td {
+  border : 2px solid black;
+   margin-left: auto;
+  margin-right: auto;
+}
+th,td {
+  padding: 9px;
+}
+</style>
+<body>
+<h1>TECHOVID 2020</h1>
+<p>Details of participants</p>
+<p id='showtrc'></p>
+<table id="demo"></table>
+
+<script>
+var x,xmlhttp,xmlDoc
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "index.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML; 
+x = xmlDoc.getElementsByTagName("cs");
+table="<tr><th>STUDENT NAME</th><th>COLLEGE</th></tr>";
+for (i = 0; i <x.length; i++) { 
+  table += "<tr onclick='displaytrack(" + i + ")'><td>";
+  table += x[i].getElementsByTagName("stuname")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("stucollege")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+}
+document.getElementById("demo").innerHTML = table;
+
+function displaytrack(i) {
+  document.getElementById("showtrc").innerHTML =
+  "STUDENT NAME: " +
+  x[i].getElementsByTagName("stuname")[0].childNodes[0].nodeValue +
+  "<br>COLLEGE: " +
+  x[i].getElementsByTagName("stucollege")[0].childNodes[0].nodeValue +
+  "<br>BRANCH: " + 
+  x[i].getElementsByTagName("stubranch")[0].childNodes[0].nodeValue +
+  "<br>EMAIL: " +
+  x[i].getElementsByTagName("stuemail")[0].childNodes[0].nodeValue;
+}
+
+    </script>
+
+</body>
+</html>

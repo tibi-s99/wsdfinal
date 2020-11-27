@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head><title>Register</title>
+  <script type="text/javascript">
+    function createCookie(cookieName,cookieValue,daysToExpire)
+        {
+          var date = new Date();
+          date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+          document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+        }
+    function accessCookie(cookieName)
+        {
+          var name = cookieName + "=";
+          var allCookieArray = document.cookie.split(';');
+          for(var i=0; i<allCookieArray.length; i++)
+          {
+            var temp = allCookieArray[i].trim();
+            if (temp.indexOf(name)==0)
+            return temp.substring(name.length,temp.length);
+          }
+          return "";
+        }
+    function checkCookie()
+        {
+          var user = accessCookie("testCookie");
+          if (user!="")
+          alert("Welcome Back " + user + "!!!");
+          else
+          {
+            user = prompt("Please enter your name");
+            ph = prompt("Please enter your phonenumber");
+            num = prompt("How many days you want to store your data on your computer?");
+            if (user!="" && user!=null)
+            {
+            createCookie("testCookie", user, ph, num);
+            }
+          }
+        }
+      </script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 50px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+ <script src=main.js></script>
+     
+ 
+</head>
+<body onload="checkCookie()">
+
+<div class="modal">
+  <div class="container">
+    <h1>TECHOVID</h1>
+    <p>Please fill in this form to register.</p>
+    <hr>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" id="t1" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="t2" required>
+
+    <label for="branch"><b>Branch</b></label>
+    <input type="text" placeholder="Enter branch" name="Branch" id="t3" required>
+
+    <label for="college"><b>College/University</b></label>
+    <input type="text" placeholder="Enter college/university" name="college" id="t4" required>
+ 
+    <label for="state"><b>State</b></label>
+    <input type="text" placeholder="Enter state" name="state" id="t5" required>
+
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter address" name="address" id="t6" required>
+
+    <label for="age"><b>Age</b></label>
+    <input type="text" placeholder="Enter age" name="age" id="t7" required>
+
+    <label for="phno"><b>Phone number</b></label>
+    <input type="text" placeholder="Enter phone number" name="phno" id="t8" required>
+
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter username" name="uname" id="t9" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="t10" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="t11" required>
+    <hr>
+   
+   <button type="submit" class="registerbtn" onclick="registration()" />Register</button>
+   
+   
+ 
+ 
+</div>
+
+</body>
+</html>
+
+
+ 
+ 
